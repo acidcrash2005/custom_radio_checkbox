@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Формы HTML</title>
+    <script src="https://use.fontawesome.com/129c100fbd.js"></script>
+
+    <style>
+        .checkbox, .radio{
+            position: relative;
+        }
+        
+        .checkbox input, .radio input{
+            position: absolute;
+            left: -9999em;
+            top: 0;
+        }
+        .checkbox input:checked + span i, .radio input:checked + span i{
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .checkbox span, .radio span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #00a4ff;
+            border-radius: 3px;
+            color: #006fad;
+            vertical-align: top;
+            margin-top: 1px;
+            margin-right: 4px;
+        }
+        
+        .radio span{
+            border-radius: 100%;
+            position: relative;
+        }
+        
+        .checkbox span i{
+            position: relative;
+            left: 0px;
+            top: -4px;
+            
+            transform: scale(1.5);
+            opacity: 0;
+            
+            transition: all 0.25s ease;
+        }
+        
+        .radio span i{
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            right: 2px;
+            bottom: 2px;
+            
+            border-radius: 100%;
+            background: #006fad;
+            
+            transform: scale(2.5);
+            opacity: 0;
+            
+            transition: all 0.25s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <p>
+            <label class="checkbox">
+            <input type="checkbox"><span><i class="fa fa-check" aria-hidden="true"></i></span>
+            Варинат 1
+        </label>
+        </p>
+
+        <p>
+            <label class="checkbox">
+                <input type="checkbox"><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                Варинат 2
+            </label>
+        </p>
+        
+        <p>
+            <label class="radio">
+            <input type="radio" name="r1"><span><i></i></span>
+            Варинат 1
+        </label>
+        </p>
+        <p>
+            <label class="radio">
+            <input type="radio" name="r1"><span><i></i></span>
+            Варинат 2
+        </label>
+        </p>
+        <p>
+            <label class="radio">
+            <input type="radio" name="r1"><span><i></i></span>
+            Варинат 3
+        </label>
+        </p>
+    </form>
+</body>
+
+</html>
